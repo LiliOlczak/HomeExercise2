@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <TextView
+            android:text="Notes for"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/userText"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent" android:textSize="30sp"
+            android:textColor="@color/colorPrimary"/>
+    <Button
+            android:text="ADD NOTE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/buttonAddNote"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="2dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:onClick="openAddNoteActivity" android:textColor="@color/colorPrimaryDark" android:textStyle="bold"/>
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="301dp"
+            android:layout_height="361dp"
+            tools:layout_editor_absoluteX="45dp" android:id="@+id/recycler" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/userText" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonAddNote"/>
+</android.support.constraint.ConstraintLayout>
